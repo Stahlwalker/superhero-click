@@ -8,7 +8,7 @@ const Jumbo = () => (
   <div className="main-container">
     <div className="container">
       <div className="jumbotron">
-        <h1>You will have 3 seconds to try and memorize the blue boxes.</h1>
+        <h1>Click on an image to earn points, but don't click on any more than once!</h1>
       </div>
     </div>
   </div>
