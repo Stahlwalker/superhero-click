@@ -5,9 +5,11 @@
   box-sizing: border-box;
 }
 
+
 body {
   margin: 20px 0;
-  background: #6589F9;
+  background-image: url(Images/grey.jpg);
+  background-size: cover;
 }
 
 .grid {
