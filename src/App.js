@@ -2,8 +2,6 @@
 import React from "react";
 // import logo from './logo.svg';
 import './App.css';
-// import Game from "./components/Game/Game";
-import Title from "./components/Title";
 import Wrapper from "./components/Wrapper";
 import Jumbo from "./components/Jumbo/Jumbo";
 import Nav from "./components/Nav/Nav";
@@ -12,7 +10,6 @@ import CardsArrayDisplay from "./components/CardsArrayDisplay/CardsArrayDisplay"
 const App = () => (
   <Wrapper>
   <Nav />
-  <Title>Clicky Game</Title>
   <Jumbo />
   <CardsArrayDisplay/>;
   </Wrapper>
