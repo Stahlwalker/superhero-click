@@ -9,13 +9,16 @@ class CardsArrayDisplay extends Component{
 state={
        cards
    }
+
 //handleClick(){}
+
     render(){
         console.log(this.state.cards)
         return(
             <div>{this.state.cards.map(card=>(
                <img src={require(`../Cards/Images/${card.img}`)} alt="pic"/>
-                ))}</div>
+                ))}
+                </div>
            
             
         )
