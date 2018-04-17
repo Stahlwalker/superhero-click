@@ -51,6 +51,41 @@ const Cards=
   {
     'name': 'catwoman',
     'img': 'catwoman.png',
+  },
+  {
+    'name': 'mr freeze',
+    'img': 'freeze.png',
+  },
+  {
+    'name': 'robin',
+    'img': 'robin.png',
+  },  {
+    'name': 'lois',
+    'img': 'lois.png',
+  },
+  {
+    'name': 'nightwing',
+    'img': 'Nightwing.png',
+  },
+  {
+    'name': 'pengiun',
+    'img': 'penguin.png',
+  },
+  {
+    'name': 'riddler',
+    'img': 'ridderl.png',
+  },
+  {
+    'name': 'shazam',
+    'img': 'shazam.png',
+  },
+  {
+    'name': 'black adam',
+    'img': 'black.png',
+  },
+  {
+    'name': 'martian manhunter',
+    'img': 'martian.png',
   }
 ]
 
