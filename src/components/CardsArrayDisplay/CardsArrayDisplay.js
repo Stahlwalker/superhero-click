@@ -11,15 +11,18 @@ state={
    }
 
 //handleClick(){}
+handleClick()
+{
+    console.log("hello there");
+}
 
     render(){
         console.log(this.state.cards)
         return(
             <div>{this.state.cards.map(card=>(
-               <img src={require(`../Cards/Images/${card.img}`)} alt="pic"/>
-                ))}
+              <img onClick={this.handleClick} src={require(`../Cards/Images/${card.img}`)} alt="pic"/>
+                ))} 
                 </div>
-           
             
         )
     }
