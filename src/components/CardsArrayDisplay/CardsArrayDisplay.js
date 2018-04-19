@@ -8,13 +8,12 @@ import './CardsArrayDisplay.css';
 class CardsArrayDisplay extends Component{
 state={
     cardsArr: cards
-   }
+   };
 
-handleClick()
+handleClick = () =>
 {
     console.log("click working");
     const shuffleImages = this.state.cardsArr.sort((a,b) => 0.5 - Math.random())
-    // const shuffleImages = this.state.cardsArr.sort(function(a,b) { 0.5 - Math.random()})
     this.setState({cardsArr: shuffleImages}) 
 
 }
