@@ -25,8 +25,8 @@ handleClick = () =>
 
         if (this.state.score === 20) {
             alert("you won");
-        } else if (this.state.score > this.state.goal) {
-            console.log("you lose");
+        } else if (this.state.score > 20) {
+            console.log("you lose")
         }
     }
 //add const game with if/else statments
