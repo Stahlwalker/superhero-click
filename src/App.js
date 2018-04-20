@@ -10,9 +10,11 @@ import cards from "./components/Cards/Cards"
 
 class App extends Component{
     state={
+    id: [],
     cardsArr: cards,
     score: 0,
-    goal: 21
+    goal: 21,
+    status: ""
     };
 
 handleClick = () =>
@@ -20,6 +22,12 @@ handleClick = () =>
         console.log("click working");
         const shuffleImages = this.state.cardsArr.sort((a,b) => 0.5 - Math.random())
         this.setState({cardsArr: shuffleImages, score:this.state.score +1}) 
+
+        if (this.state.score === 20) {
+            alert("you won");
+        } else if (this.state.score > this.state.goal) {
+            console.log("you lose");
+        }
     }
 //add const game with if/else statments
 IncrementItem = () => {
