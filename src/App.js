@@ -10,12 +10,37 @@ import cards from "./components/Cards/Cards"
 
 class App extends Component{
     state={
-    id: [],
+    clickedHeroIds: [],
     cardsArr: cards,
     score: 0,
-    goal: 21,
+    highestScore: 0,
     status: ""
     };
+
+
+// shuffleImages= id => {
+//     let clickedHeroIds = this.state.clickedHeroIds;
+
+//     if(clickedHeroIds.incluces(id)){
+//         this.setState({ clickedHeroIds: [], score: 0, status: "Game Over! You Lost. Click to play again!"});
+//         return;
+//     }else{
+//         clickedHeroIds.push(id)
+
+//         if(clickedHeroIds.length === 20){
+//             this.setState({score: 20, status: "You Won! Great Job", clickedHeroIds: []});
+//             console.log("You Win");
+//             return;
+//         }
+
+//         this.setState({ cards, clickedHeroIds, score: clickedHeroIds.length, status: " " });
+
+//         for (let i = cards.length -1; i> 0; i--) {
+//             let j = Math.floor(Math.random() * (i + 1));
+//             [cards[i], cards[j]] = [cards[j], cards[i]];
+//         }
+//     }
+// }
 
 handleClick = () =>
     {
@@ -30,16 +55,24 @@ handleClick = () =>
         }
     }
 //add const game with if/else statments
-IncrementItem = () => {
-    this.setState({ score: this.state.score + 1 });
-  }
+// IncrementItem = () => {
+//     this.setState({ score: this.state.score + 1 });
+//   }
+
+
+// resetGame = () => {
+//     this.state.cardsArr.forEach((image) => {
+//       image.clicked = false;
+//     })
+//     this.setState({ score: 0 })
+//   } 
 
 render(){
       return(
           <Wrapper>
           <Nav 
             score ={this.state.score}
-            goal ={this.state.goal}
+            goal ={this.state.highestScore}
              />
           <Jumbo />
           <CardsArrayDisplay
@@ -50,14 +83,5 @@ render(){
       );
 }
 }
-// const App = () => (
-//   <Wrapper>
-//   <Nav
-//   score ={this.state.score}  
-//    />
-//   <Jumbo />
-//   <CardsArrayDisplay/>;
-//   </Wrapper>
-// );
 
 export default App;

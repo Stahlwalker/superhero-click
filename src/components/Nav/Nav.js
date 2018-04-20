@@ -7,7 +7,7 @@ const Nav = props => (
                 <a className="navbar-brand">Clicky Game</a>
                 <a className="navbar-brand">Click an image to begin!</a>
                 <a className="navbar-brand">Score {props.score}</a>
-                <a className="navbar-brand">Goal {props.goal}</a>
+                <a className="navbar-brand">Highest Score {props.highestScore}</a>
             </nav>
      </div>       
 );
