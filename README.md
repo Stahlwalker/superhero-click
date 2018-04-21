@@ -2,7 +2,7 @@
 
 [Superhero Clicky Game](https://stahlwalker.github.io/superhero-click/)
 
-![This is a screen shot of my app](https://github.com/Stahlwalker/superhero-click/blob/master/src/components/Wrapper/Images/clickyread.png)
+![This is a screen shot of my app](https://github.com/Stahlwalker/superhero-click/blob/master/src/components/Wrapper/Images/Game3.png)
 
 ## What the project does?
     * This is a memory game created with react 
