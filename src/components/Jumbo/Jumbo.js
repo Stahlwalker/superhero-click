@@ -1,10 +1,6 @@
 import React from "react";
 import "./Jumbo.css";
 
-// const name= "Luke";
-// const letters = name.length;
-// const thoughts = "is uber cool";
-
 const Jumbo = () => (
   <div className="main-container">
     <div className="container">

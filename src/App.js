@@ -44,46 +44,10 @@ shuffleImages= id => {
             alert("You Win");
             return;
         }
-
-        // const refreshCards =
-        // cards.map(c => {
-        //     return c;
-
-        // })
-
-        // for (let i = this.state.cardsArr.length -1; i> 0; i--) {
-        //     let j = Math.floor(Math.random() * (i + 1));
-        //     [this.state.cardsArr[i], this.state.cardsArr[j]] = [this.state.cardsArr[j], this.state.cardsArr[i]];
-        // }
-        
+ 
         this.setState({ cardsArr:shuffleImages, clickedHeroIds, score: clickedHeroIds.length, status: " " });
     }
 }
-
-// handleClick = () =>
-//     {
-//         console.log("click working");
-//         const shuffleImages = this.state.cardsArr.sort((a,b) => 0.5 - Math.random())
-//         this.setState({cardsArr: shuffleImages, score:this.state.score +1}) 
-
-//         if (this.state.score === 20) {
-//             alert("you won");
-//         } else if (this.state.score > 20) {
-//             console.log("you lose")
-//         }
-//     }
-//add const game with if/else statments
-// IncrementItem = () => {
-//     this.setState({ score: this.state.score + 1 });
-//   }
-
-
-// resetGame = () => {
-//     this.state.cardsArr.forEach((image) => {
-//       image.clicked = false;
-//     })
-//     this.setState({ score: 0 })
-//   } 
 
 render(){
       return(
