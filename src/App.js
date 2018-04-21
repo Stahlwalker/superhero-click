@@ -18,42 +18,60 @@ class App extends Component{
     };
 
 
-// shuffleImages= id => {
-//     let clickedHeroIds = this.state.clickedHeroIds;
+shuffleImages= id => {
+    console.log(id);
+    let clickedHeroIds = this.state.clickedHeroIds;
 
-//     if(clickedHeroIds.incluces(id)){
-//         this.setState({ clickedHeroIds: [], score: 0, status: "Game Over! You Lost. Click to play again!"});
-//         return;
-//     }else{
-//         clickedHeroIds.push(id)
+    if(clickedHeroIds.includes(id)){
+        alert("you lose click to try again");
+        const refreshCards =
+        cards.map(c => {
+            return c;
 
-//         if(clickedHeroIds.length === 20){
-//             this.setState({score: 20, status: "You Won! Great Job", clickedHeroIds: []});
-//             console.log("You Win");
-//             return;
-//         }
-
-//         this.setState({ cards, clickedHeroIds, score: clickedHeroIds.length, status: " " });
-
-//         for (let i = cards.length -1; i> 0; i--) {
-//             let j = Math.floor(Math.random() * (i + 1));
-//             [cards[i], cards[j]] = [cards[j], cards[i]];
-//         }
-//     }
-// }
-
-handleClick = () =>
-    {
+        })
+        const shuffleImages = refreshCards.sort((a,b) => 0.5 - Math.random())
+        this.setState({ cardsArr:shuffleImages, clickedHeroIds: [], score: 0, status: "Game Over! You Lost. Click to play again!"});
+        return;
+    }else{
+        clickedHeroIds.push(id)
         console.log("click working");
         const shuffleImages = this.state.cardsArr.sort((a,b) => 0.5 - Math.random())
         this.setState({cardsArr: shuffleImages, score:this.state.score +1}) 
+        
 
-        if (this.state.score === 20) {
-            alert("you won");
-        } else if (this.state.score > 20) {
-            console.log("you lose")
+        if(clickedHeroIds.length === 20){
+            this.setState({score: 20, status: "You Won! Great Job", clickedHeroIds: []});
+            alert("You Win");
+            return;
         }
+
+        // const refreshCards =
+        // cards.map(c => {
+        //     return c;
+
+        // })
+
+        // for (let i = this.state.cardsArr.length -1; i> 0; i--) {
+        //     let j = Math.floor(Math.random() * (i + 1));
+        //     [this.state.cardsArr[i], this.state.cardsArr[j]] = [this.state.cardsArr[j], this.state.cardsArr[i]];
+        // }
+        
+        this.setState({ cardsArr:shuffleImages, clickedHeroIds, score: clickedHeroIds.length, status: " " });
     }
+}
+
+// handleClick = () =>
+//     {
+//         console.log("click working");
+//         const shuffleImages = this.state.cardsArr.sort((a,b) => 0.5 - Math.random())
+//         this.setState({cardsArr: shuffleImages, score:this.state.score +1}) 
+
+//         if (this.state.score === 20) {
+//             alert("you won");
+//         } else if (this.state.score > 20) {
+//             console.log("you lose")
+//         }
+//     }
 //add const game with if/else statments
 // IncrementItem = () => {
 //     this.setState({ score: this.state.score + 1 });
@@ -77,7 +95,9 @@ render(){
           <Jumbo />
           <CardsArrayDisplay
           cardsArr ={this.state.cardsArr}
-          handleClick={this.handleClick}
+          shuffleImages={this.shuffleImages}
+
+
           />;
           </Wrapper>
       );

@@ -13,7 +13,7 @@ const CardsArrayDisplay = (props) => (
 // }
      
             <div>{props.cardsArr.map(card=>(
-              <img onClick={props.handleClick} src={require(`../Cards/Images/${card.img}`)} alt="pic"/>
+              <img onClick={() => props.shuffleImages(card.id)} src={require(`../Cards/Images/${card.img}`)} alt="pic"/>
                 ))} 
                 </div>
     
