@@ -39,8 +39,8 @@ shuffleImages= id => {
         this.setState({cardsArr: shuffleImages, score:this.state.score +1}) 
         
 
-        if(clickedHeroIds.length === 20){
-            this.setState({score: 20, status: "You Won! Great Job", clickedHeroIds: []});
+        if(clickedHeroIds.length === 21){
+            this.setState({score: 21, status: "You Won! Great Job", clickedHeroIds: []});
             alert("You Win");
             return;
         }
